@@ -1,11 +1,20 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Great+Vibes&display=swap');
+
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: url('back.jpeg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
 }
 
+/* Header Styles */
 header {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 1em 0;
 }
@@ -14,6 +23,7 @@ nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    margin: 0;
 }
 
 nav ul li {
@@ -24,117 +34,61 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-section {
-    padding: 2em;
-    text-align: center;
+.nav-right {
+    float: right;
 }
 
-#home {
-    background: #f4f4f4;
-}
-
-#about, #portfolio, #contact {
-    background: #fff;
-}
-
-h1, h2, h3 {
-    margin: 0.5em 0;
-}
-
-.portfolio-item {
-    border: 1px solid #ddd;
-    margin: 1em;
-    padding: 1em;
-    display: inline-block;
-    width: 45%;
-    box-sizing: border-box;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-form label {
-    display: block;
-    margin: 0.5em 0 0.2em;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 0.5em;
-    margin-bottom: 1em;
-    box-sizing: border-box;
-}
-
-form button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.7em 1.5em;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
+.nav-right li {
     display: inline;
-    margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
+/* Section Styles */
 section {
     padding: 2em;
     text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #home {
-    background: #f4f4f4;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    margin-top: 1em;
 }
 
-#about, #portfolio, #contact {
-    background: #fff;
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1em auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Typography */
 h1, h2, h3 {
     margin: 0.5em 0;
+    font-family: 'Poppins', sans-serif;
 }
 
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Portfolio Item Styles */
 .portfolio-item {
     border: 1px solid #ddd;
     margin: 1em;
@@ -142,17 +96,30 @@ h1, h2, h3 {
     display: inline-block;
     width: 45%;
     box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.portfolio-item h3 {
+    color: #000;
+}
+
+/* Form Styles */
 form {
     max-width: 600px;
     margin: 0 auto;
     text-align: left;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 form label {
     display: block;
     margin: 0.5em 0 0.2em;
+    color: #000;
 }
 
 form input, form textarea {
@@ -160,6 +127,8 @@ form input, form textarea {
     padding: 0.5em;
     margin-bottom: 1em;
     box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 form button {
@@ -168,18 +137,64 @@ form button {
     border: none;
     padding: 0.7em 1.5em;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 form button:hover {
     background-color: #555;
 }
 
+/* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+}
+
+#skills ul li {
+    margin: 0.5em 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    form {
+        padding: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5em 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    form {
+        padding: 0.5em;
+    }
 }
